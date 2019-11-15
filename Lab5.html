@@ -13334,6 +13334,7 @@ Info in &lt;TCanvas::Print&gt;: pdf file /Users/keirahansen/phys-measurement/unc
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <blockquote><p>I have used a library called ROOT which is a python wrapper for a set of C code that was developed by CERN. It is an absolute nightmare to download, since physicists are not the best software engineers, so I know that most people will not be able to run the code but I really only need it to get a good fit for the position of the 40K and 208Tl peaks. The reason I used ROOT's fit function over scipy's curve fit function is mostly because I am more familliar with it but also because the fit is very robust and since I only have to fit one spectrum I am eyeing the initial parameters by eye.</p>
+<p>The function I am fitting to is $\displaystyle f(x) = a\,e^{\left( \frac{x\,-\,\mu}{\sigma} \right)^2} + e^{mx\,+\,b}$, which is a gaussian on top of an exponential. For us $a$ <em>(p0)</em> is the height or number of counts in a peak, $\mu$ <em>(p1)</em> is the position of the center of the peak, $\sigma$ <em>(p2)</em> is the width of the peak, $b$ <em>(p3)</em> is the intercept of the background exponential, and $m$ <em>(p4)</em> is the slope of the background exponential.</p>
 </blockquote>
 
 </div>
@@ -13517,6 +13518,19 @@ Info in &lt;TCanvas::Print&gt;: pdf file /Users/keirahansen/phys-measurement/unc
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
     </div>
   </div>
